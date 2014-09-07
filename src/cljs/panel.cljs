@@ -54,7 +54,7 @@
               (when (:coord-process opts)
                 (let [coord (:coord opts)
                       coord-process (:coord-process opts)]
-                  (coord-process coord owner (xbm:trans-out opts)))))
+                  (coord-process coord owner (:trans-out opts)))))
   
   (render-state [_ state]
                 (let [transstr (transform-str (:trans state)

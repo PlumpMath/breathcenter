@@ -40,16 +40,17 @@
 
 
 
+(def db-credentials (-> "resources/dbconfig.edn"
+                        slurp
+                        clojure.core/read-string))
 
 
 
-
-(def db-spec {:subprotocol "pgsql" ;; environ variables for when
-              ;; deployment happens, johann
+(def db-spec {:subprotocol "pgsql" 
               :classname "com.impossibl.postgres.jdbc.PGDriver"
-              :subname "//localhost:5432/breath"
-              :user "postgres"
-              :password "admin"})
+              :subname (or (System/getenv "SUBNAME")  (:subname db-credentials)) 
+              :user  (or (System/getenv "USER") (:user db-credentials)) 
+              :password (or (System/getenv "PW") (:password db-credentials))})
 
 
 

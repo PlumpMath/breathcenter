@@ -42,7 +42,7 @@
                                       :top 0
                                       :left 0
                                       :zIndex (when (:toggled state) 1)
-                                      :display "inline-flex"b
+                                      :display "inline-flex"
                                       :transition  (str "all " (:duration opts) "s " (:tween opts))
                                       :width  (if (:toggled state)
                                                 (str (:sec-final-width opts) "%")
