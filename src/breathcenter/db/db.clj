@@ -74,9 +74,9 @@
           (jdbc/query {:connection (:dbconn connection)} ["SELECT * FROM example"])))
 
 
-(defn query-sessid [sessid connection] ;; there has to be a better way lol
+(defn query-sessid [sessid connection] 
   (first (jdbc/query {:connection (:dbconn connection)}
-               [(format "SELECT username FROM breather WHERE sessid = '%s'" sessid)])))
+                     ["SELECT username FROM breather WHERE sessid = ?" sessid])))
 
 
 
@@ -88,7 +88,8 @@
 
 (defn query-user [username connection] 
   (first (jdbc/query {:connection (:dbconn connection)}
-                     [(format "SELECT * FROM breather WHERE username = '%s'" username)])))
+                     ["SELECT * FROM breather WHERE username = ?" username]
+                )))
 
 
 
