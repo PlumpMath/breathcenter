@@ -5,6 +5,7 @@
 
 TlDR; Breathcenter is a webapp built in clojure(script) that hopes to inspire people to think about their immediacy.
 
+I am still hashing out how to handle user accounts and front end design. The basic wiring is all there if you want an early peak :).
 
 
 
