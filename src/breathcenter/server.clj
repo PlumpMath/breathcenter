@@ -21,10 +21,10 @@
 
 
 
+;;helper examples from https://github.com/seancorfield/om-sente/blob/master/src/clj/om_sente/server.clj
 
 
-
-(defn unique-id
+(defn unique-id ;;temporarily using rand-int
   "Return a really unique ID (for an unsecured session ID).
   No, a random number is not unique enough. Use a UUID for real!"
   []
