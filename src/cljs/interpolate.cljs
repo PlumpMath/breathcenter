@@ -1,5 +1,7 @@
 (ns breathcenter.interpolate)
 
+;; from https://github.com/pleasetrythisathome/bardo/blob/master/src/cljs/bardo/interpolate.cljs
+
 (defprotocol IInterpolate (interpolate [this target]))
 
 (extend-protocol IInterpolate

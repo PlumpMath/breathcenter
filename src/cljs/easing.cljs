@@ -2,6 +2,8 @@
   (:refer-clojure :exclude [reverse])
   (:require [clojure.string :refer [split join]]))
 
+;; from https://github.com/pleasetrythisathome/bardo/blob/master/src/cljs/bardo/easing.cljs
+
 (defn clamp
   [f]
   (fn [t]
